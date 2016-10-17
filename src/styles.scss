@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+$bootstrap-sass-asset-helper: true;
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "./assets/scss/include.scss";
+@import "./assets/scss/mixins/icon.scss";
+@import "./assets/scss/mixins/typography.scss";
+// header
+@import "./assets/scss/header/header.scss";

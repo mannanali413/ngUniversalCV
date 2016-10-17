@@ -15,7 +15,7 @@ import { createEngine } from 'angular2-express-engine';
 import { MainModule } from './app.node.module';
 
 // enable prod for faster renders
-enableProdMode();
+// enableProdMode();
 
 const app = express();
 const ROOT = path.join(path.resolve(__dirname, '..'));
@@ -33,9 +33,6 @@ app.use('/assets', express.static(path.join(__dirname, 'assets'), {maxAge: 30}))
 app.use(express.static(path.join(ROOT, 'dist/client'), {index: false}));
 
 
-import { serverApi } from './backend/api';
-// Our API for demos only
-app.get('/data.json', serverApi);
 
 function ngApp(req, res) {
   res.render('index', {
@@ -51,10 +48,7 @@ function ngApp(req, res) {
 // Routes with html5pushstate
 // ensure routes match client-side-app
 app.get('/', ngApp);
-app.get('/about', ngApp);
-app.get('/about/*', ngApp);
-app.get('/home', ngApp);
-app.get('/home/*', ngApp);
+app.get('/catalog/product/view/:id', ngApp);
 
 
 app.get('*', function(req, res) {

@@ -1,0 +1,442 @@
+<div class="container-fluid nopadding product-details-container" *ngIf="product">
+  <div class="container">
+    <!-- // breadcrumbs start -->
+    <div data-breadcrumb class="col-xs-12 col-sm-12 nopadding">
+      <ul class="breadcrumb nopadding">
+        <li><a href="http://www.craftsvilla.com/"><span>Home</span></a></li>
+        <li><a href="http://www.craftsvilla.com/womens-clothing/"><span>Women's Fashion</span></a></li>
+        <li class="active"><span>Sarees</span></li>
+      </ul>
+    </div>
+    <!-- // breadcrumbs end -->
+    <!-- // PDP Start -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="pdp-left-container">
+          <div class="pdp-thumb-left">
+            <ul>
+              <li><a href="#"><img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-12093-MSTYL91507096380--Style_By_India-1475499254-Craftsvilla_2.jpg" alt=""></a></li>
+              <li><a href="#"><img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-12093-MSTYL91507096380--Style_By_India-1475499255-Craftsvilla_4.jpg" alt=""></a></li>
+              <li><a href="#"><img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-12093-MSTYL91507096380--Style_By_India-1475499254-Craftsvilla_3.jpg" alt=""></a></li>
+              <li><a href="#"><img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-12093-MSTYL91507096380--Style_By_India-1475499254-Craftsvilla_1.jpg" alt=""></a></li>
+            </ul>
+          </div>
+          <div class="pdp-thumb-viewer">
+            <div class="col-xs-12 pdp-img-viewer">
+              <!-- // -->
+              <div class="pdp-whishlist">
+                <a href="#">
+                  <i class="icon cv-wishlist-icon"></i>
+                </a>
+              </div>
+              <!-- // -->
+              <img src="http://img1.craftsvilla.com/orig{{product.imgUrl}}" alt="">
+            </div>
+            <div class="col-xs-12 nopadding pdp-zoom">
+              <p>
+                <span class="sku-id">{{product.sku}}</span>
+                <span>|</span>
+                <span><i class="icon cv-zoom"></i> Hover to zoom</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="pdp-right-container">
+          <div class="col-xs-12 pdp-block">
+            <h4>{{product.productName}}</h4>
+            <p *ngIf="vendorDetails">
+              <span>Sold by:</span>
+              <span class="vender-name">{{vendorDetails.vendorName}}</span>
+              <span class="pdp-ratting">
+                <i class="icon cv-star-active"></i>
+                <i class="icon cv-star-active"></i>
+                <i class="icon cv-star-active"></i>
+                <i class="icon cv-star-active"></i>
+                <i class="icon cv-star-deactive"></i>
+              </span>
+              <span class="ratting-count">({{vendorDetails.vendorRating}})</span>
+            </p>
+            <!-- // Details start -->
+            <ul class="pdp-variant">
+              <li>Details:</li>
+               <li>
+                 <ul>
+                   <li *ngFor="let attributeObj of productAttributes">
+                     <span>{{attributeObj.key}}</span><span> : </span><span>{{attributeObj.value.join(' , ')}}</span>
+                   </li>
+                 </ul>
+              </li>
+              <li>
+                <a href="#">+ More</a>
+              </li>
+            </ul>
+            <!-- // Details End -->
+          </div>
+          <hr>
+          <div class="col-xs-12 pdp-block">
+            <!-- // Price and delivery start -->
+            <ul class="pdp-price-delivery-variant">
+              <li>Price:</li>
+              <li>
+                <h3 class="pdp-price-offer">
+                  <span class="pdp-offer-price"><sup>&#x20B9;</sup>1,082</span>
+                  <span class="pdp-original-price"><sup>&#x20B9;</sup>1,082</span>
+                  <span class="pdp-discount">50% Off</span>
+                </h3>
+              </li>
+            </ul>
+            <!-- // -->
+            <ul class="pdp-price-delivery-variant">
+              <li>Delivery:</li>
+              <li>
+                <div class="col-xs-12 nopadding pdp-pincode">
+                  <div class="pdp-pincode-box-wrapper">
+                    <i class="icon cv-location"></i>
+                    <input type="text" maxlength="6" placeholder="Enter PinCode" class="pdp-pincode-box" value="400101">
+                    <span class="pdp-pin-change-check"><i class="icon cv-icon-change"></i> Change</span>
+                  </div>
+                </div>
+                <div class="col-xs-12 nopadding pdp-cashon">
+                  <i class="icon cv-cash-avalable"></i> Cash on Delivery available for Pincode 400101
+                </div>
+                <div class="col-xs-12 nopadding pdp-shipping">
+                  <i class="icon cv-shipping"></i> Free shipping in India | 1,000 outside India
+                </div>
+                <div class="col-xs-12 nopadding pdp-delivery-time">
+                  <i class="icon cv-estimated"></i> Estimated Delivery Time 5-7 working days
+                </div>
+              </li>
+            </ul>
+            <!-- // Price and delivery end -->
+          </div>
+          <hr>
+          <div class="col-xs-12 pdp-block">
+            <ul class="pdp-color-size-container">
+              <li>
+                <ul>
+                  <li>Size :</li>
+                  <li>
+                    <span class="pdp-size-variant">XS</span>
+                    <span class="pdp-size-variant">S</span>
+                    <span class="pdp-size-variant">M</span>
+                    <span class="pdp-size-variant">L</span>
+                    <span class="pdp-size-variant">XL</span>
+                    <span class="pdp-size-chart pull-right"><a href="#"><i class="icon cv-size-chart"></i>Size Chart</a></span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>Color :</li>
+                  <li>
+                    <span class="pdp-color-variant red"></span>
+                    <span class="pdp-color-variant green"></span>
+                    <span class="pdp-color-variant blue"></span>
+                    <span class="pdp-color-variant yellow"></span>
+                    <span class="pdp-color-variant black"></span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- // Addto cart and buy button start  -->
+            <div class="col-xs-12 nopadding pdp-button-container">
+              <button type="button" class="btn btn-addtocart">ADD TO CART</button>
+              <button type="button" class="btn btn-buynow">BUY NOW</button>
+            </div>
+            <!-- // Addto cart and buy button end  -->
+            <!-- // -->
+            <div class="col-xs-12 nopadding pdp-buyer-protections">
+              <p><span class="icon cv-pdp-buyer"></span>100% Buyer Protection, 7 Days Easy Return policy <a href="#">Know More</a></p>
+            </div>
+            <!-- // -->
+          </div>
+        </div>
+      </div>
+      <!-- // Product Spacification and Similar Products Start -->
+      <div class="col-xs-12 pdp-spacification-wrapper">
+        <div class="col-xs-12 nopadding">
+          <ul pdp-tabs class="pdp-tabs">
+            <li><a href="#" class="active">Product Specification</a></li>
+            <li><a href="#">Similar Products</a></li>
+          </ul>
+          <!-- // Product Spacification Data Start -->
+          <div class="col-xs-12 pdp-spacification-data">
+            <div class="col-xs-12">
+              <div class="col-xs-12 nopadding psd-heading">
+                <p>Details</p>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <ul class="psd-list">
+                  <li><span>Fabric</span> : Faux Georgette, Net.</li>
+                  <li><span>Work</span> : Floral Patch, Lace, Resham</li>
+                  <li><span>Occasions</span> : Party and Festivals</li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <ul class="psd-list">
+                  <li><span>Occasions</span> : Party and Festivals.</li>
+                  <li><span>Salwar</span> Fabric : Silk</li>
+                  <li><span>Wash</span> : Dry-Cleaned</li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <ul class="psd-list">
+                  <li><span>Occasions</span> : Party and Festivals.</li>
+                  <li><span>Salwar</span> Fabric : Silk</li>
+                  <li><span>Wash</span> : Dry-Cleaned</li>
+                </ul>
+              </div>
+              <div class="col-xs-12 nopadding psd-heading">
+                <p>Product Description</p>
+              </div>
+              <div class="col-xs-12 nopadding">
+                <p>There's nothing better that can beat the rich,elegant style that a traditional saree add to your look. Check out this collectible saree from collection that features fine design and work… <a href="#">More</a></p>
+              </div>
+              <!-- // Seller Details Start -->
+              <div class="col-xs-12 nopadding psd-heading">
+                <p>Seller Details</p>
+              </div>
+              <div class="col-xs-12 nopadding pdp-seller-details">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 pdp-seller-details-left">
+                    <p>
+                      <span class="seller-img">img</span>
+                      <span class="vender-name">VASTRA VALLEY</span>
+                      <span class="pdp-ratting">
+                        <i class="icon cv-star-active"></i>
+                        <i class="icon cv-star-active"></i>
+                        <i class="icon cv-star-active"></i>
+                        <i class="icon cv-star-active"></i>
+                        <i class="icon cv-star-deactive"></i>
+                      </span>
+                      <span class="ratting-count">(4)</span>
+                    </p>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 pdp-seller-details-right">
+                    <a href="#" class="view-store-btn pull-right">View Store</a>
+                  </div>
+                </div>
+              </div>
+              <!-- // Seller Details End -->
+            </div>
+          </div>
+          <!-- // Product Spacification Data End -->
+          <hr>
+          <!-- // Line through -->
+          <!-- // similar product start -->
+          <div class="col-xs-12 nopadding pdp-similar-product">
+            <ul pdp-tabs class="pdp-tabs">
+              <li><a href="#" class="active">Similar Product</a></li>
+            </ul>
+            <!-- // Product Grid Start -->
+            <div class="col-xs-12 products-container flex-center nopadding">
+              <div class="col-xs-12 section nopadding">
+                <div class="product-row">
+                  <div class="col-xs-12 col-sm-3 product-box">
+                    <div class="col-xs-12 product">
+                      <!-- // Product image start -->
+                      <div class="product-img">
+                        <a href="#">
+                          <img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-MCRAZ69722482850--Crazy_Sale-Craftsvilla_1.jpg" alt="">
+                        </a>
+                      </div>
+                      <!-- // Product image end -->
+                      <!-- // Product Details start -->
+                      <div class="col-xs-12 product-details">
+                        <a href="#" class="product-name">Thankar Pink & Cream Emb Thankar Pink & Cream Emb Thankar Pink & Cream Emb</a>
+                        <p class="product-price-offer">
+                          <span class="product-offer-price">&#x20B9; 1,082</span>
+                          <span class="product-original-price">&#x20B9; 5,741</span>
+                          <span class="product-off">50% Off</span>
+                        </p>
+                      </div>
+                      <!-- // Product Details end -->
+                    </div>
+                  </div>
+                  <!-- //  -->
+                  <div class="col-xs-12 col-sm-3 product-box">
+                    <div class="col-xs-12 product">
+                      <!-- // Product image start -->
+                      <div class="product-img">
+                        <a href="#">
+                          <img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-MCRAZ69722482850--Crazy_Sale-Craftsvilla_1.jpg" alt="">
+                        </a>
+                      </div>
+                      <!-- // Product image end -->
+                      <!-- // Product Details start -->
+                      <div class="col-xs-12 product-details">
+                        <a href="#" class="product-name">Thankar Pink & Cream Emb Thankar Pink & Cream Emb Thankar Pink & Cream Emb</a>
+                        <p class="product-price-offer">
+                          <span class="product-offer-price">&#x20B9; 1,082</span>
+                          <span class="product-original-price">&#x20B9; 5,741</span>
+                          <span class="product-off">50% Off</span>
+                        </p>
+                      </div>
+                      <!-- // Product Details end -->
+                    </div>
+                  </div>
+                  <!-- //  -->
+                  <div class="col-xs-12 col-sm-3 product-box">
+                    <div class="col-xs-12 product">
+                      <!-- // Product image start -->
+                      <div class="product-img">
+                        <a href="#">
+                          <img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-MCRAZ69722482850--Crazy_Sale-Craftsvilla_1.jpg" alt="">
+                        </a>
+                      </div>
+                      <!-- // Product image end -->
+                      <!-- // Product Details start -->
+                      <div class="col-xs-12 product-details">
+                        <a href="#" class="product-name">Thankar Pink & Cream Emb Thankar Pink & Cream Emb Thankar Pink & Cream Emb</a>
+                        <p class="product-price-offer">
+                          <span class="product-offer-price">&#x20B9; 1,082</span>
+                          <span class="product-original-price">&#x20B9; 5,741</span>
+                          <span class="product-off">50% Off</span>
+                        </p>
+                      </div>
+                      <!-- // Product Details end -->
+                    </div>
+                  </div>
+                  <!-- //  -->
+                  <div class="col-xs-12 col-sm-3 product-box">
+                    <div class="col-xs-12 product">
+                      <!-- // Product image start -->
+                      <div class="product-img">
+                        <a href="#">
+                          <img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-MCRAZ69722482850--Crazy_Sale-Craftsvilla_1.jpg" alt="">
+                        </a>
+                      </div>
+                      <!-- // Product image end -->
+                      <!-- // Product Details start -->
+                      <div class="col-xs-12 product-details">
+                        <a href="#" class="product-name">Thankar Pink & Cream Emb Thankar Pink & Cream Emb Thankar Pink & Cream Emb</a>
+                        <p class="product-price-offer">
+                          <span class="product-offer-price">&#x20B9; 1,082</span>
+                          <span class="product-original-price">&#x20B9; 5,741</span>
+                          <span class="product-off">50% Off</span>
+                        </p>
+                      </div>
+                      <!-- // Product Details end -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // Product Grid End -->
+          </div>
+          <!-- // similar product end -->
+          <!-- // Recommendations product start -->
+          <div class="col-xs-12 nopadding pdp-similar-product">
+            <ul pdp-tabs class="pdp-tabs">
+              <li><a href="#" class="active">Recommendations For You</a></li>
+            </ul>
+            <!-- // Product Grid Start -->
+            <div class="col-xs-12 products-container flex-center nopadding">
+              <div class="col-xs-12 section nopadding">
+                <div class="product-row">
+                  <div class="col-xs-12 col-sm-3 product-box">
+                    <div class="col-xs-12 product">
+                      <!-- // Product image start -->
+                      <div class="product-img">
+                        <a href="#">
+                          <img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-MCRAZ69722482850--Crazy_Sale-Craftsvilla_1.jpg" alt="">
+                        </a>
+                      </div>
+                      <!-- // Product image end -->
+                      <!-- // Product Details start -->
+                      <div class="col-xs-12 product-details">
+                        <a href="#" class="product-name">Thankar Pink & Cream Emb Thankar Pink & Cream Emb Thankar Pink & Cream Emb</a>
+                        <p class="product-price-offer">
+                          <span class="product-offer-price">&#x20B9; 1,082</span>
+                          <span class="product-original-price">&#x20B9; 5,741</span>
+                          <span class="product-off">50% Off</span>
+                        </p>
+                      </div>
+                      <!-- // Product Details end -->
+                    </div>
+                  </div>
+                  <!-- //  -->
+                  <div class="col-xs-12 col-sm-3 product-box">
+                    <div class="col-xs-12 product">
+                      <!-- // Product image start -->
+                      <div class="product-img">
+                        <a href="#">
+                          <img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-MCRAZ69722482850--Crazy_Sale-Craftsvilla_1.jpg" alt="">
+                        </a>
+                      </div>
+                      <!-- // Product image end -->
+                      <!-- // Product Details start -->
+                      <div class="col-xs-12 product-details">
+                        <a href="#" class="product-name">Thankar Pink & Cream Emb Thankar Pink & Cream Emb Thankar Pink & Cream Emb</a>
+                        <p class="product-price-offer">
+                          <span class="product-offer-price">&#x20B9; 1,082</span>
+                          <span class="product-original-price">&#x20B9; 5,741</span>
+                          <span class="product-off">50% Off</span>
+                        </p>
+                      </div>
+                      <!-- // Product Details end -->
+                    </div>
+                  </div>
+                  <!-- //  -->
+                  <div class="col-xs-12 col-sm-3 product-box">
+                    <div class="col-xs-12 product">
+                      <!-- // Product image start -->
+                      <div class="product-img">
+                        <a href="#">
+                          <img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-MCRAZ69722482850--Crazy_Sale-Craftsvilla_1.jpg" alt="">
+                        </a>
+                      </div>
+                      <!-- // Product image end -->
+                      <!-- // Product Details start -->
+                      <div class="col-xs-12 product-details">
+                        <a href="#" class="product-name">Thankar Pink & Cream Emb Thankar Pink & Cream Emb Thankar Pink & Cream Emb</a>
+                        <p class="product-price-offer">
+                          <span class="product-offer-price">&#x20B9; 1,082</span>
+                          <span class="product-original-price">&#x20B9; 5,741</span>
+                          <span class="product-off">50% Off</span>
+                        </p>
+                      </div>
+                      <!-- // Product Details end -->
+                    </div>
+                  </div>
+                  <!-- //  -->
+                  <div class="col-xs-12 col-sm-3 product-box">
+                    <div class="col-xs-12 product">
+                      <!-- // Product image start -->
+                      <div class="product-img">
+                        <a href="#">
+                          <img src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-MCRAZ69722482850--Crazy_Sale-Craftsvilla_1.jpg" alt="">
+                        </a>
+                      </div>
+                      <!-- // Product image end -->
+                      <!-- // Product Details start -->
+                      <div class="col-xs-12 product-details">
+                        <a href="#" class="product-name">Thankar Pink & Cream Emb Thankar Pink & Cream Emb Thankar Pink & Cream Emb</a>
+                        <p class="product-price-offer">
+                          <span class="product-offer-price">&#x20B9; 1,082</span>
+                          <span class="product-original-price">&#x20B9; 5,741</span>
+                          <span class="product-off">50% Off</span>
+                        </p>
+                      </div>
+                      <!-- // Product Details end -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // Product Grid End -->
+          </div>
+          <!-- // Recommendations product end -->
+        </div>
+      </div>
+      <!-- // Product Spacification and Similar Products End -->
+    </div>
+
+
+    <div data-overlay="" class="col-xs-12 ng-scope" *ngIf="showModal">
+    </div>
+    <!-- // PDP End -->
+  </div>
+</div>
